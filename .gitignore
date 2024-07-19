@@ -1,0 +1,16 @@
+.ipynb_checkpoints/
+.idea/
+__pycache__/
+logs/
+checkpoints/
+new_model/
+new_tfx/
+data_for_tfx/
+
+
+
+
+
+
+
+
