@@ -1,6 +1,7 @@
 import os
 from typing import List, Tuple
 import re
+import shutil
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -65,6 +66,8 @@ def transform_data(train_data_path='./data/train.csv'):
     data_for_tfx = './data_for_tfx'
     if not os.path.isdir(data_for_tfx):
         os.mkdir(data_for_tfx)
+    if os.path.isdir('new_tfx'):
+        shutil.rmtree('new_tfx')
     train.to_csv(f'{data_for_tfx}/train.csv', index=False)
     val.to_csv(f'{data_for_tfx}/val.csv', index=False)
     
